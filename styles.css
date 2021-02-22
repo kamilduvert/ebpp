@@ -8,8 +8,8 @@
 :root {
     --primaryColor: #1E6F20;
     --secondaryColor: #FECC30;
-    --darkColor: #000000;
-    --greyColor:#efefef;
+    --darkColor: #444;
+    --greyColor:#e2e2e2;
     --lightColor: #fff;
 
     --textShadow: 0 0 2px #000;
@@ -46,6 +46,10 @@ a, a:visited, a:hover, a:active {
 section {
     padding: 50px 0;
     position: relative;
+}
+
+.fullContainer {
+    width: 100%;
 }
 
 .container {
@@ -121,24 +125,6 @@ section {
     display: none;
 }
 
-.navbar ul {
-    display: flex;
-    align-items: center; 
-}
-
-.navbar a {
-    display: inline-block;
-    line-height: 10vh;
-    padding: 0 15px;
-    text-transform: capitalize;
-    color: var(--lightColor);
-    transition: background-color 0.3s;
-}
-
-.navbar a:hover {
-    background-color: var(--primaryColor);
-}
-
 .banner {
     min-height: 100vh;
     min-width: 100%;
@@ -150,17 +136,13 @@ section {
 }
 
 .banner h1 {
-    /* margin-top: 180px; */
     margin-top: 100px;
     display: inline-block;
-    /* font-size: 3.5rem; */
     font-size: 2.3rem;
     color: var(--lightColor);
     text-shadow: 0 0 4px var(--darkColor);
-    /* line-height: 4.2rem; */
     line-height: 3.5rem;
     font-weight: 100;
-    
 }
 
 .banner h1 span {
@@ -176,11 +158,8 @@ section {
     color: var(--lightColor);
     text-shadow: 0 0 5px var(--darkColor);
     margin-top: 20px;
-    /* font-size: 1.5rem; */
     font-size: 1rem;
-    /* line-height: 1.8; */
     line-height: 1.2;
-
 }
 
 .banner button {
@@ -193,9 +172,8 @@ section {
     border-radius: 15px;
     font-weight: 600;
     cursor: pointer;
-    margin-bottom: 20px;
     position: absolute;
-    bottom: -5%;
+    bottom: -2%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -213,6 +191,7 @@ section {
     font-weight: bold;
     color: var(--primaryColor);
 }
+
 .about .cards {
     display: flex;
     justify-content: space-between;
@@ -229,19 +208,10 @@ section {
     color: #444;
     text-align: center;
     border-radius: 15px;
-    /* height: auto; */
-    border: 1px solid #ccc;
+    border: 1px solid  var(--greyColor);
     transition: all 0.5s;
     margin-right: 10px;
 }
-
-/* .about .card:hover {
-    width: 350px;
-    margin-top: -20px;
-    padding: 55px;
-    height: auto;
-    border: 3px solid var(--primaryColor);
-} */
 
 .about .card h3 {
     font-weight: 600;
@@ -263,7 +233,6 @@ section {
     border-radius: 3px;
     cursor: pointer;
     transition: background-color 0.3s;
-    
 }
 
 .about button:hover {
@@ -274,13 +243,10 @@ section {
 /* ========================== PROGRAMS =================================== */
 
 .programs {
-    background-color: #e2e2e2;
+    background-color: var(--greyColor);
 }
 
 .programs .cards {
-    /* display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 50px; */
     display: flex;
     justify-content: space-between;
     height: auto;
@@ -293,7 +259,7 @@ section {
     text-align: center;
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 0 3px #c5c5c5;
+    box-shadow: 0 0 3px var(--greyColor);
     position: relative;
     margin: 0 10px 15px;
 }
@@ -399,13 +365,16 @@ section {
     cursor: pointer;
 }
 
+.programs .card button:hover {
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+
+}
+
 /* ========================== EDUCATION =================================== */
 
 .education {
     display:none;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
 }
 
 .education .videoPlayer {
@@ -622,3 +591,160 @@ section {
 }
 
 
+
+
+
+
+
+/* TABLET */
+
+@media screen and (min-width: 768px) {
+    
+    /* ======================= HEADER ========================== */
+    .header {
+        background-color: rgba(0,0,0,0.6);
+    }
+
+    .banner h1 {
+        margin-top: 100px;
+        font-size: 3.5rem;
+        line-height: 4.2rem;
+    }
+
+    .banner p {
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
+
+    .banner button {
+        bottom: 2%;
+    }
+
+    .header .container .logo span {
+        color: var(--lightColor);
+        font-size: 2rem;
+        margin-left: 30px;
+    }
+    
+    .toggle-menu {
+        font-size: 2rem;
+        color: var(--lightColor);
+    }
+
+    /* ======================= ABOUT ========================== */
+
+    .about p {
+        margin-top: 40px;
+    }
+    
+    .about .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .about .card {
+        width: 200px;
+        margin: 10px;
+    }
+    
+    .about .card:hover {
+        width: 350px;
+        padding: 25px;
+        height: auto;
+        border: 3px solid var(--primaryColor);
+    }
+    
+    .about .card h3 {
+        font-weight: 600;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+    
+    
+    .about button:hover {
+        background-color: var(--primaryColor);
+        color: var(--lightColor);
+    }
+
+    /* ======================= PROGRAMS ========================== */
+
+    .programs .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
+    }
+
+    /* ======================= EDUCATION ========================== */
+    .education {
+        display:block;
+        height: 100vh;
+        overflow: hidden;
+        position: none;
+    }
+
+    .education .educationContainer {
+        display: block;
+        background-color: rgba(0,0,0,0.7);
+        color: var(--lightColor);
+        text-shadow: 0 0 3px #000;
+        padding: 30px;
+        width: 100%;
+        position: unset;
+    }
+
+    .education .videoPlayer {
+        display: block;
+        position: unset;
+        transform: unset;
+    }
+
+    /* ======================= JOIN ========================== */
+
+    .join .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* ======================= FOOTER ========================== */
+
+    .footer .container {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+
+/* DESKTOP */
+
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .navbar ul {
+        display: flex;
+        align-items: center; 
+    }
+    
+    .navbar a {
+        display: inline-block;
+        line-height: 10vh;
+        padding: 0 15px;
+        text-transform: capitalize;
+        color: var(--lightColor);
+        transition: background-color 0.3s;
+    }
+    
+    .navbar a:hover {
+        background-color: var(--primaryColor);
+    }
+
+    .toggle-menu {
+        display: none;
+    }
+}
