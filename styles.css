@@ -37,7 +37,7 @@ a {
 }
 
 .container {
-    width: 1124px;
+    width: 1200px;
     margin: auto;
 }
 
@@ -154,7 +154,7 @@ section {
     color: var(--lightColor);
     text-shadow: 0 0 2px var(--darkColor);
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 1.5rem;
     line-height: 1.8rem;
 
 }
@@ -353,4 +353,56 @@ section {
     border: 0;
     outline: 0;
     cursor: pointer;
+}
+
+/* ========================== EDUCATION =================================== */
+
+.education {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.education .videoPlayer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.education .sectionTitle {
+    color: var(--lightColor);
+    text-shadow: 0 0 4px #000;
+}
+
+.education .educationContainer {
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+    width: 30%;
+    top: 30%;
+    right: 5%;
+    color: var(--lightColor);
+    text-shadow: 0 0 3px #000;
+    padding: 30px;
+}
+
+.education .educationContainer h3 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.education .educationContainer p {
+    font-size: 1.1rem;
+    line-height: 1.2;
+    margin: 10px 0 30px;
+}
+
+.education .educationContainer button {
+    background-color: var(--primaryColor);
+    border: 0;
+    color: var(--lightColor);
+    outline: 0;
+    font-weight: bold;
+    padding: 10px 25px;
 }
