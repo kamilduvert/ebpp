@@ -1,3 +1,6 @@
+
+/* MOBILE FIRST */
+
 /* ========================= GLOBAL STYLES ==================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
@@ -8,7 +11,9 @@
     --darkColor: #000000;
     --greyColor:#efefef;
     --lightColor: #fff;
+
     --textShadow: 0 0 2px #000;
+    --boxShadow: ;
 }
 
 html {
@@ -35,15 +40,17 @@ a, a:visited {
 
 a, a:visited, a:hover, a:active {
     color: inherit;
-  }
+}
 
-.fullContainer {
-    width: 100%;
+
+section {
+    padding: 50px 0;
+    position: relative;
 }
 
 .container {
-    width: 1200px;
-    margin: auto;
+    width: 100%;
+    padding: 0 20px;
 }
 
 .sectionTitle {
@@ -53,11 +60,12 @@ a, a:visited, a:hover, a:active {
     font-size: 2rem;
     font-weight: 200;
     margin: 0 auto 50px;
-    position: relative;
     padding: 10px 0;
     text-transform: uppercase;
+    position: relative;
 }
 
+/* Little square below the Section title */
 .sectionTitle::after {
     display: inline-block;
     content: "";
@@ -65,30 +73,28 @@ a, a:visited, a:hover, a:active {
     width: 15px;
     background-color: var(--primaryColor);
     position: absolute;
-    top: 68%;
+    top: 87%;
     left: 50%;
-    transform: rotate(45deg) translate(50%, 50%);
+    transform: rotate(45deg) translate(-50%, 50%);
     border: 3px solid var(--lightColor);
-}
-
-section {
-    padding: 100px 0;
-    position: relative;
 }
 
 /* ========================== HEADER =================================== */
 
 .header {
     width: 100%;
-    background-color: rgba(0,0,0,0.6);
+    height: 10vh;
+    background-color: var(--lightColor);
     position: fixed;
     z-index: 2;
-    height: 10vh;
 }
 
 .header .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
 }
 
 .header .container .logo {
@@ -102,14 +108,22 @@ section {
 }
 
 .header .container .logo span {
-    font-size: 1.5rem;
-    color: var(--lightColor);
-    margin-left: 20px;
+    font-size: 1rem;
+    color: var(--darkColor);
+    margin-left: 5px;
+}
+
+.toggle-menu {
+    font-size: 1rem;
+}
+
+.navbar {
+    display: none;
 }
 
 .navbar ul {
     display: flex;
-    align-items: center;  
+    align-items: center; 
 }
 
 .navbar a {
@@ -127,40 +141,45 @@ section {
 
 .banner {
     min-height: 100vh;
-    width: 100%;
+    min-width: 100%;
     background-image: url("https://images.pexels.com/photos/1739842/pexels-photo-1739842.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-    background-size: cover;
     background-position: top;
     background-attachment: fixed;
+    text-align: center;
+    position: relative;
 }
 
 .banner h1 {
-    margin-top: 180px;
+    /* margin-top: 180px; */
+    margin-top: 100px;
     display: inline-block;
-    font-size: 3.5rem;
+    /* font-size: 3.5rem; */
+    font-size: 2.3rem;
     color: var(--lightColor);
-    text-shadow: 0 0 2px var(--darkColor);
-    width: 50%;
-    line-height: 4.2rem;
+    text-shadow: 0 0 4px var(--darkColor);
+    /* line-height: 4.2rem; */
+    line-height: 3.5rem;
     font-weight: 100;
-    z-index: 100;
+    
 }
 
 .banner h1 span {
     background-color: var(--primaryColor);
     display: inline-block;
     line-height: 3.5rem;
-    padding: 2px 15px;
+    padding: 0 15px;
     font-weight: 600;
     border-radius: 5px;
 }
 
 .banner p {
     color: var(--lightColor);
-    text-shadow: 0 0 2px var(--darkColor);
+    text-shadow: 0 0 5px var(--darkColor);
     margin-top: 20px;
-    font-size: 1.5rem;
-    line-height: 1.8;
+    /* font-size: 1.5rem; */
+    font-size: 1rem;
+    /* line-height: 1.8; */
+    line-height: 1.2;
 
 }
 
@@ -170,44 +189,59 @@ section {
     outline: none;
     color: var(--secondaryColor);
     padding: 8px 15px;
-    margin-top: 40px;
     font-size: 2rem;
     border-radius: 15px;
     font-weight: 600;
     cursor: pointer;
+    margin-bottom: 20px;
+    position: absolute;
+    bottom: -5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
 /* ==== ====================== ABOUT =================================== */
 
+.about p {
+    margin-top: 20px;
+}
+
+.about span {
+    display: inline-block;
+    margin: 20px 0;
+    font-weight: bold;
+    color: var(--primaryColor);
+}
 .about .cards {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 20px;
     position: relative;
-    height: 245px;
+    height: auto;
+    overflow: auto;
 }
 
 .about .card {
-    width: 320px;
+    min-width: 300px;
     background-color: var(--greyColor);
-    padding: 35px;
+    padding: 15px;
     color: #444;
     text-align: center;
     border-radius: 15px;
-    height: auto;
+    /* height: auto; */
     border: 1px solid #ccc;
     transition: all 0.5s;
+    margin-right: 10px;
 }
 
-.about .card:hover {
+/* .about .card:hover {
     width: 350px;
     margin-top: -20px;
     padding: 55px;
     height: auto;
     border: 3px solid var(--primaryColor);
-}
+} */
 
 .about .card h3 {
     font-weight: 600;
@@ -217,7 +251,7 @@ section {
 
 .about .card p {
     font-size: 1rem;
-    margin-top: 15px;
+    margin-top: px;
 }
 
 .about button {
@@ -241,23 +275,27 @@ section {
 
 .programs {
     background-color: #e2e2e2;
-
 }
 
 .programs .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
+    /* display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 50px; */
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    overflow: auto;
 }
 
 .programs .card {
+    min-width: 300px;
     background-color: var(--lightColor);
     text-align: center;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 3px #c5c5c5;
     position: relative;
-    margin-bottom: 15px;
+    margin: 0 10px 15px;
 }
 
 .programs .card .image {
@@ -364,6 +402,7 @@ section {
 /* ========================== EDUCATION =================================== */
 
 .education {
+    display:none;
     height: 100vh;
     overflow: hidden;
     position: relative;
@@ -416,7 +455,7 @@ section {
 /* ========================== GALLERY =================================== */
 
 .gallery .galleryContainer {
-    column-count: 4;
+    column-count: 1;
     column-gap: 20px;
 }
 
@@ -460,6 +499,7 @@ section {
 .join {
     background-color: var(--primaryColor);
     color: var(--lightColor);
+    text-align: center;
 }
 
 .join .joinTitle {
@@ -474,8 +514,9 @@ section {
 .join p {
     font-size: 1.1rem;
     line-height: 1.5;
-    margin: 10px 0 20px;
-    width: 50%;
+    margin: 10px 10px 20px;
+    /* width: 50%; */
+    text-align: left;
 }
 
 .join a {
@@ -520,11 +561,12 @@ section {
     background-color:var(--darkColor);
     color: var(--greyColor);
     padding: 50px 0;
+    text-align: center;
 }
 
 .footer .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 50px;
 }
 
@@ -553,12 +595,14 @@ section {
 
 .footer .social-media {
     display: flex;
-    width: 30%;
+    width: 50%;
+    margin: 0 auto;
     justify-content: space-between;
 }
 
 .footer .social-media i {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    margin-right: 10px;
 }
 
 .footer .newsLetterContainer img {
@@ -576,3 +620,5 @@ section {
     height: 40px;
     padding: 7px 15px;
 }
+
+
