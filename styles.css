@@ -324,6 +324,7 @@ section {
     margin-top: 15px;
     font-weight: 600;
     color: #444;
+    font-size: 1.3rem;
 }
 
 .programs .card .description {
@@ -333,7 +334,7 @@ section {
     margin-top: 10px;
     font-weight: 300;
     color: #444;
-    line-height: 1.2rem;
+    line-height: 1.4;
 }
 
 .programs .card .description span {
@@ -394,7 +395,7 @@ section {
 
 .education .educationContainer p {
     font-size: 1.1rem;
-    line-height: 1.2;
+    line-height: 1.5;
     margin: 10px 0 30px;
 }
 
@@ -405,4 +406,96 @@ section {
     outline: 0;
     font-weight: bold;
     padding: 10px 25px;
+}
+
+/* ========================== GALLERY =================================== */
+
+.gallery .galleryContainer {
+    column-count: 4;
+    column-gap: 20px;
+}
+
+.gallery .image {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.gallery .galleryContainer img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.gallery .galleryContainer .title {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--greyColor);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.4s;
+}
+
+.gallery .galleryContainer .image:hover .title {
+    opacity: 1;
+}
+
+.gallery .galleryContainer .image:hover img {
+    transform: scale(1.2);
+}
+
+/* ========================== JOIN =================================== */
+
+.join {
+    background-color: var(--primaryColor);
+    color: var(--lightColor);
+}
+
+.join .joinTitle {
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+.join .joinTitle span {
+    font-weight: 800;
+}
+
+.join p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 10px 0 20px;
+    width: 50%;
+}
+
+.join a {
+    text-decoration: underline;
+    color: var(--secondaryColor);
+}
+
+.join button {
+    padding: 7px 15px;
+    margin-top: 10px;
+    border: 0;
+    outline: 0;
+    font-size: 1.2rem;
+    border-radius: 7px;
+    color: #000;
+    
+}
+
+.join .btn-fundraise {
+    margin-right: 10px;
+    background-color: #424242;
+    color: var(--lightColor);
+}
+
+.join .btn-volunteer {
+    background-color: var(--greyColor);
+
 }
