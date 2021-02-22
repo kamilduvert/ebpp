@@ -5,6 +5,7 @@
 :root {
     --primaryColor: #1E6F20;
     --secondaryColor: #FECC30;
+    --darkColor: #000000;
     --greyColor:#efefef;
     --lightColor: #fff;
     --textShadow: 0 0 2px #000;
@@ -28,9 +29,13 @@ ul {
     list-style-type: none;
 }
 
-a {
+a, a:visited {
     text-decoration: none;
 }
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+  }
 
 .fullContainer {
     width: 100%;
@@ -130,7 +135,7 @@ section {
 }
 
 .banner h1 {
-    margin-top: 250px;
+    margin-top: 180px;
     display: inline-block;
     font-size: 3.5rem;
     color: var(--lightColor);
@@ -155,7 +160,7 @@ section {
     text-shadow: 0 0 2px var(--darkColor);
     margin-top: 20px;
     font-size: 1.5rem;
-    line-height: 1.8rem;
+    line-height: 1.8;
 
 }
 
@@ -282,37 +287,37 @@ section {
 
 .programs .card:nth-child(1) .image,
 .programs .card:nth-child(1) .image:after  {
-    background: url("/images/program1.jpg");
+    background: url("/images/programs/1.jpg");
     background-repeat: no-repeat;
 }
 
 .programs .card:nth-child(2) .image,
 .programs .card:nth-child(2) .image:after  {
-    background: url("/images/program2.jpg");
+    background: url("/images/programs/2.jpg");
     background-repeat: no-repeat;
 }
 
 .programs .card:nth-child(3) .image,
 .programs .card:nth-child(3) .image:after  {
-    background: url("/images/program3.jpg");
+    background: url("/images/programs/3.jpg");
     background-repeat: no-repeat;
 }
 
 .programs .card:nth-child(4) .image,
 .programs .card:nth-child(4) .image:after  {
-    background: url("/images/program4.jpg");
+    background: url("/images/programs/4.jpg");
     background-repeat: no-repeat;
 }
 
 .programs .card:nth-child(5) .image,
 .programs .card:nth-child(5) .image:after  {
-    background: url("/images/program5.jpg");
+    background: url("/images/programs/5.jpg");
     background-repeat: no-repeat;
 }
 
 .programs .card:nth-child(6) .image,
 .programs .card:nth-child(6) .image:after  {
-    background: url("/images/program6.jpg");
+    background: url("/images/programs/6.jpg");
     background-repeat: no-repeat;
 }
 
@@ -486,16 +491,88 @@ section {
     font-size: 1.2rem;
     border-radius: 7px;
     color: #000;
-    
+    cursor: pointer;
 }
 
 .join .btn-fundraise {
     margin-right: 10px;
-    background-color: #424242;
+    background-color: var(--darkColor);
     color: var(--lightColor);
+}
+
+.join .btn-fundraise:hover {
+    background-color:var(--secondaryColor);
+    color: var(--primaryColor);
 }
 
 .join .btn-volunteer {
     background-color: var(--greyColor);
+}
 
+.join .btn-volunteer:hover {
+    color: var(--primaryColor);
+    background-color: var(--secondaryColor);
+}
+
+/* ========================== FOOTER =================================== */
+
+.footer {
+    background-color:var(--darkColor);
+    color: var(--greyColor);
+    padding: 50px 0;
+}
+
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+}
+
+.footer .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 2px solid;
+    padding: 0 0 5px 0;
+}
+
+.footer p {
+    margin: 20px 0;
+}
+
+.footer .linksContainer ul {
+    margin: 20px 0;
+}
+
+.footer .linksContainer a {
+    text-decoration: none;
+    color: var(--greyColor);
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.footer .social-media {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.footer .social-media i {
+    font-size: 1.5rem;
+}
+
+.footer .newsLetterContainer img {
+    height: 100px;
+    margin-bottom: 11px;
+}
+
+.footer .newsLetterContainer input {
+    background-color: transparent;
+    border: 1px solid var(--greyColor);
+    outline: none;
+    border: 10px 15px;
+    width: 100%;
+    color: var(--greyColor);
+    height: 40px;
+    padding: 7px 15px;
 }
