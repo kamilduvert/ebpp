@@ -1,16 +1,10 @@
-const toggleMenu = document.querySelector('#toggle');
-const navbarUl = document.querySelector('.header__navbar__list');
-const openIcon = document.querySelector('#open-icon');
-const closeIcon = document.querySelector('#close-icon');
+const toggleButton = document.getElementById('toggle-button');
+const navbar = document.getElementById('navbar')
 
+toggleButton.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+});
 
-toggleMenu.addEventListener('click', () => {
-    navbarUl.classList.toggle('active');
-    openIcon.classList.toggle('active');
-    closeIcon.classList.toggle('active');
+navbar.addEventListener('click', () => {
+    navbar.classList.remove('active');
 })
-
-navbarUl.addEventListener('click', () => {
-    navbarUl.classList.toggle('active');
-})
-

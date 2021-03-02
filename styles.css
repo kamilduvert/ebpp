@@ -44,7 +44,7 @@ p {
 }
 
 .section {
-    padding: 80px 0;
+    padding: 100px 0;
     position: relative;
 }
 
@@ -72,6 +72,21 @@ p {
     left: 50%;
     transform: rotate(45deg) translate(-50%, 50%);
     border: 3px solid var(--lightColor);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar-track {
+    background-color: var(--lightColor);
+}
+
+::-webkit-scrollbar {
+    height: 10px;
+    background-color: var(--lightColor);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--darkColor);
+    border-radius: 3px;
 }
 
 
@@ -149,6 +164,7 @@ p {
 .header__navbar__item a:hover {
     background-color: var(--primaryColor);
     color: var(--lightColor);
+    border-radius: 15px;
 }
 
 .header__navbar__item.--donate a {
@@ -156,7 +172,7 @@ p {
     color: var(--lightColor);
     padding: 7px 15px;
     border-radius: 15px;
-    width: 25%;
+    width: 20%;
 }
 
 .header__navbar__item.--donate a:hover {
@@ -169,18 +185,6 @@ p {
 .header__toggle {
     font-size: 1.2rem;
     display: block;
-}
-
-#header__toggle--close {
-    display: none;
-}
-
-#header__toggle--open.active {
-    display: none;
-}
-
-#header__toggle--close.active {
-    display: inline;
 }
 
 .header__navbar__list.active{
@@ -257,9 +261,10 @@ p {
 .about__tagline {
     display: block;
     font-size: 1.5rem;
-    margin: 30px auto;
+    margin: 70px 0 20px 0;
     font-weight: bold;
     color: var(--primaryColor);
+    text-align: center;
 }
 
 .about__cards {
@@ -267,12 +272,16 @@ p {
     justify-content: space-between;
     margin-top: 20px;
     position: relative;
+    padding: 15px 0;
     height: auto;
-    overflow: auto;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
 }
 
 .about__cards__item {
-    min-width: 300px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 250px;
     background-color: var(--greyColor);
     padding: 15px;
     color: #444;
@@ -282,6 +291,7 @@ p {
     transition: all 0.5s;
     margin: 10px;
 }
+
 
 .about__cards__item__title {
     font-weight: 600;
@@ -302,7 +312,7 @@ p {
     border: none;
     padding: 7px 15px;
     margin-top: 15px;
-    font-size: 1rem;
+    font-size: 0.7rem;
     border-radius: 60px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -335,20 +345,24 @@ p {
 
 .programs__cards {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     height: auto;
-    overflow: auto;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .programs__cards__item {
-    min-width: 300px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 300px;
     background-color: var(--lightColor);
     text-align: center;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 3px var(--greyColor);
     position: relative;
-    margin: 0 10px 15px;
+    margin: 20px;
 }
 
 .programs__cards__item__image {
@@ -565,7 +579,7 @@ p {
     font-size: 2.5rem;
     font-weight: 100;
     line-height: 1;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     margin-top: 70px;
 }
 
@@ -709,6 +723,11 @@ p {
 
     /* ------------ Header --------------*/
 
+    .header__navbar__item a:hover {
+        border-radius: 15px;
+        width: 20%;
+    }
+
     .banner {
         background-size: cover;
         background-position: top;
@@ -745,10 +764,11 @@ p {
         flex-wrap: wrap;
         justify-content: center;
         margin: 0 auto;
+        width: 95%;
     }
 
     .about__cards__item {
-        width: 200px;
+        flex-basis: 150px;
 
     }
 
@@ -758,6 +778,7 @@ p {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
+        width: 100%;
     }
 
     .programs__cards__item__image {
@@ -860,7 +881,7 @@ p {
         transition: background-color 0.3s;
         font-size: 1rem;
         padding: 7px 7px;
-        border-bottom: 2px solid transparent;
+        border-bottom: 4px solid transparent;
     }
     
     .header__navbar__item a:hover {
@@ -878,7 +899,7 @@ p {
 
     .banner {
         background-size: cover;
-        background-position: center;
+        background-position: left center;
         text-align: left;
     }
 
@@ -890,6 +911,10 @@ p {
     .banner__content__text {
         margin-top: 50px;
         font-size: 1.5rem;
+    }
+
+    .banner__content__cta {
+        margin-left: 80px;
     }
 
     /* ------------ About --------------*/
