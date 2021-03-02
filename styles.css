@@ -85,7 +85,7 @@ p {
 
 /* ========================== MOBILE FIRST < 768px =================================== */
 
-/* Header */
+/* ------------ Header --------------*/
 
 .header {
     width: 100%;
@@ -119,7 +119,7 @@ p {
     line-height: 1.2;
 }
 
-/* Navigation Menu */
+/* ------------ Navigation menu--------------*/
 
 /* Dropdown */
 .header__navbar__list {
@@ -134,18 +134,18 @@ p {
     transition: transform 0.5s;
 }
 
-.header__navbar__list__item {
+.header__navbar__item {
     margin: 10px;
 }
 
-.header__navbar__list__item a {
+.header__navbar__item a {
     display: inline-block;
     padding: 7px 0px;
     width: 100%;
     font-size: 1rem;
 }
 
-.header__navbar__list__item a:hover {
+.header__navbar__item a:hover {
     background-color: var(--primaryColor);
     color: var(--lightColor);
 }
@@ -172,6 +172,7 @@ p {
     top: 65px;
 }
 
+/* ------------ Banner --------------*/
 
 .banner {
     color: var(--lightColor);
@@ -212,7 +213,7 @@ p {
     margin-top: 10px;
 }
 
-.banner button {
+.banner__content__cta {
     background-color: var(--primaryColor);
     border: 0;
     outline: none;
@@ -225,19 +226,19 @@ p {
     cursor: pointer;
 }
 
-.banner button:hover {
+.banner__content__cta:hover {
     background-color: var(--secondaryColor);
     color: var(--primaryColor);
 }
 
 
-/* ==== ====================== ABOUT =================================== */
+/* ------------ About --------------*/
 
-.about p {
+.about__text {
     margin-top: 20px;
 }
 
-.about span {
+.about__tagline {
     display: inline-block;
     margin: 20px 0;
     font-weight: bold;
@@ -265,18 +266,18 @@ p {
     margin-right: 10px;
 }
 
-.about__cards__item h3 {
+.about__cards__item__title {
     font-weight: 600;
     font-size: 1.2rem;
     text-transform: uppercase;
 }
 
-.about__cards__item i {
+.about__cards__item__icon {
     font-size: 3rem;
     margin-bottom: 20px;
 }
 
-.about__cards__item button {
+.about__cards__item__cta {
     border: 1px solid var(--primaryColor);
     outline: none;
     padding: 7px 15px;
@@ -287,12 +288,12 @@ p {
     transition: background-color 0.3s;
 }
 
-.about__cards__item button:hover {
+.about__cards__item__cta:hover {
     background-color: var(--primaryColor);
     color: var(--lightColor);
 }
 
-/* ========================== PROGRAMS =================================== */
+/* ------------ Programs --------------*/
 
 .programs {
     background-color: var(--greyColor);
@@ -403,7 +404,7 @@ p {
     font-weight: bold;
 }
 
-.programs__cards__item__button {
+.programs__cards__item__cta {
     position: absolute;
     left: 50%;
     bottom: -15px;
@@ -417,35 +418,36 @@ p {
     cursor: pointer;
 }
 
-.programs__cards__item__button:hover {
+.programs__cards__item__cta:hover {
     background-color: var(--secondaryColor);
     color: var(--primaryColor);
 
 }
 
-/* ========================== EDUCATION =================================== */
+/* ------------ Education --------------*/
 
 
-.education .education-content {
+.education .education__content {
     display: block;
     background-color: rgba(0,0,0,0.7);
     color: var(--lightColor);
     text-shadow: 0 0 3px #000;
     padding: 30px;
     width: 100%;
+    margin: 15px 0;
 }
 
-.education .education-content h3 {
+.education .education__content__title {
     font-size: 2.3rem;
     font-weight: 300;
 }
 
-.education .education-content p {
+.education .education__content__text {
     font-size: 1.1rem;
     margin: 25px 0 30px;
 }
 
-.education .education-content button {
+.education .education__content__cta {
     background-color: var(--primaryColor);
     border: 0;
     color: var(--lightColor);
@@ -462,26 +464,26 @@ p {
     padding-bottom: 0;
 }
 
-/* ========================== GALLERY =================================== */
+/* ------------ Gallery --------------*/
 
-.gallery .gallery-content {
+.gallery .gallery__content {
     column-count: 1;
     column-gap: 20px;
 }
 
-.gallery .image {
+.gallery__content__image {
     position: relative;
     margin-bottom: 20px;
     overflow: hidden;
 }
 
-.gallery .gallery-content img {
+.gallery__content__image img {
     width: 100%;
     display: block;
     transition: transform 0.4s;
 }
 
-.gallery .gallery-content .title {
+.gallery__content__image span {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -496,15 +498,15 @@ p {
     transition: opacity 0.4s;
 }
 
-.gallery .gallery-content .image:hover .title {
+.gallery__content__image:hover span {
     opacity: 1;
 }
 
-.gallery .gallery-content .image:hover img {
+.gallery__content__image:hover img {
     transform: scale(1.2);
 }
 
-/* ========================== JOIN =================================== */
+/* ------------ Join Us --------------*/
 
 
 .section-title.last::after {
@@ -521,7 +523,7 @@ p {
     text-align: center;
 }
 
-.join .join-title {
+.join__title {
     font-size: 3rem;
     font-weight: 100;
     line-height: 1;
@@ -529,22 +531,19 @@ p {
     margin-top: 48px;
 }
 
-.join .join-title span {
+.join__title span {
     font-weight: 800;
 }
 
-.join p {
+.join__text {
     font-size: 1.1rem;
     line-height: 1.5;
     margin: 10px 10px 20px 10px;
 }
 
-.join a {
-    text-decoration: underline;
-    color: var(--secondaryColor);
-}
 
-.join button {
+.join__cta {
+    display: inline-block;
     padding: 7px 15px;
     margin-top: 10px;
     border: 0;
@@ -555,29 +554,29 @@ p {
     cursor: pointer;
 }
 
-.join .fundraise {
-    margin-right: 10px;
+.join__cta.fundraise {
+    margin-right: 15px;
     background-color: var(--darkColor);
     color: var(--lightColor);
 }
 
-.join .fundraise:hover {
+.join__cta.fundraise:hover {
     background-color: var(--greyColor);
     color: var(--darkColor);
 }
 
-.join .volunteer {
+.join__cta.--volunteer {
     background-color: transparent;
     border: 1px solid var(--greyColor);
     color: var(--greyColor);
 }
 
-.join .volunteer:hover {
+.join__cta.--volunteer:hover {
     color: var(--primaryColor);
     background-color: var(--secondaryColor);
 }
 
-/* ========================== FOOTER =================================== */
+/* ------------ Footer --------------*/
 
 .footer {
     background-color:var(--darkColor);
@@ -586,13 +585,13 @@ p {
     text-align: center;
 }
 
-.footer .container {
+.footer__container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 50px;
 }
 
-.footer .title {
+.footer__title {
     font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -600,38 +599,16 @@ p {
     padding: 0 0 5px 0;
 }
 
-.footer p {
+.footer__text {
     margin: 20px 0;
 }
 
-.footer .links ul {
-    margin: 20px 0;
+.footer__newsletter__logo {
+    margin-top: 20px;
+    height: 80px;
 }
 
-.footer .links a {
-    text-decoration: none;
-    color: var(--greyColor);
-    margin-bottom: 10px;
-    display: inline-block;
-}
-
-.footer .social-media {
-    display: flex;
-    width: 50%;
-    margin: 0 auto;
-    justify-content: space-between;
-}
-
-.footer .social-media i {
-    font-size: 2.5rem;
-}
-
-.footer .newsletter img {
-    height: 100px;
-    margin-bottom: 11px;
-}
-
-.footer .newsletter input {
+.footer__newsletter__input {
     background-color: transparent;
     border: 1px solid var(--greyColor);
     outline: none;
@@ -641,6 +618,29 @@ p {
     height: 40px;
     padding: 7px 15px;
 }
+
+.footer__links__list {
+    margin: 20px 0;
+}
+
+.footer__links__item {
+    text-decoration: none;
+    color: var(--greyColor);
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.footer__connect__social-media {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__connect__social-media i {
+    font-size: 2.5rem;
+    margin: 0 10px;
+}
+
+
 
 
 /* ========================== TABLET  < 1024px =================================== */
