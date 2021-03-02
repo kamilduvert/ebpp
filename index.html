@@ -10,8 +10,8 @@
     <!-- Favicon-->
     <link rel="icon" type="image/png" href="images/favicon-32x32.png">
 
-    <!-- Normalize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" />
 
     <!-- Font Google-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -26,34 +26,44 @@
 
 <body>
     <div class="banner" id="home">
+
+        <!-- Header -->
         <header class="header">
-            <div class="container">
-                <div class="logo">
-                    <img src="images/logo.png" alt="EBPP logo">
-                    <span>East Bali <br>Poverty Project</span>
-                </div>
-                <nav class="navbar">
-                    <ul class="navbar-list">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#programs">Programs</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#join">Join Us</a></li>
-                        <li><a href="#">Donate</a></li>
+            
+            <div class="header__container container">
+
+                <!-- Clickable Logo -->
+                <a href="#home" class="header__logo__container">
+                    <img class="header__logo__img" src="images/logo.png" alt="EBPP logo">
+                    <span class="header__logo__title">East Bali <br>Poverty Project</span>
+                </a>
+
+                <!-- Navigation Menu -->
+                <nav class="header__navbar">
+                    <ul class="header__navbar__list">
+                        <li class="header__navbar__list__item"><a href="#home"><i class="fas fa-home"></i></a></li>
+                        <li class="header__navbar__list__item"><a href="#about">About Us</a></li>
+                        <li class="header__navbar__list__item"><a href="#programs">Programs</a></li>
+                        <li class="header__navbar__list__item"><a href="#education">Education</a></li>
+                        <li class="header__navbar__list__item"><a href="#gallery">Gallery</a></li>
+                        <li class="header__navbar__list__item"><a href="#join">Join Us</a></li>
+                        <li class="header__navbar__list__item"><a href="#">Donate</a></li>
                     </ul>
                 </nav>
-                <div class="toggle-menu" id="toggle-menu">
-                    <i id="open-icon" class="fas fa-bars"></i>
-                    <i id="close-icon" class="fas fa-times"></i>
+
+                <!-- Hamburger Menu Icons (Tablet/Mobile only) -->
+                <div class="header__toggle" id="toggle">
+                    <i id="header__toggle--open" class="fas fa-bars"></i>
+                    <i id="header__toggle--close" class="fas fa-times"></i>
                 </div>
             </div>
         </header>
 
-        <div class="container">
-            <h1>Together we Can <span>Save Lives</span></h1>
-            <p>Every Donation Supports Education for <br> 72 East Bali Mountain Children</p>
-            <button>Donate Now</button>
+        <!-- Banner -->
+        <div class="banner__content container">
+            <h1 class="banner__content__title">Together we can <span>Bring Hope</span></h1>
+            <p class="banner__content__text">Every donation supports education for <br> 72 East Bali mountain children</p>
+            <button class="banner__content__cta">Donate Now</button>
         </div>
     </div>
 
@@ -69,26 +79,26 @@
                 development in the impoverished rural communities of East Bali, Indonesia, prioritising the health,
                 nutrition and education of children.</p>
             <span>Help us to help them help themselves.</span>
-            <div class="cards">
-                <div class="card">
+            <div class="about__cards">
+                <div class="about__cards__item">
                     <i class="fas fa-hands-helping"></i>
-                    <h3 class="title">Key Achievements</h3>
+                    <h3>Key Achievements</h3>
                     
                     <button>More</button>
                 </div>
-                <div class="card">
+                <div class="about__cards__item">
                     <i class="fas fa-award"></i>
-                    <h3 class="title">Awards</h3>
+                    <h3>Awards</h3>
                     <button>More</button>
                 </div>
-                <div class="card">
+                <div class="about__cards__item">
                     <i class="fas fa-users"></i>
-                    <h3 class="title">EBPP Staff</h3>
+                    <h3>EBPP Staff</h3>
                     <button>More</button>
                 </div>
-                <div class="card">
+                <div class="about__cards__item">
                     <i class="fas fa-people-carry"></i>
-                    <h3 class="ctitle">Funding & Sponsors</h3>
+                    <h3>Funding & Sponsors</h3>
                     <button>More</button>
                 </div>
             </div>
@@ -99,53 +109,53 @@
         <div class="container">
             <h2 class="section-title">Programs</h2>
 
-            <div class="cards">
-                <div class="card">
-                    <div class="image"></div>
-                    <h3 class="title">Nutrition Improvement</h3>
-                    <p class="description">We educate mothers about nutrition, give nutritional supplements to
+            <div class="programs__cards">
+                <div class="programs__cards__item">
+                    <div class="programs__cards__item__image "></div>
+                    <h3 class="programs__cards__item__title">Nutrition Improvement</h3>
+                    <p class="programs__cards__item__desc">We educate mothers about nutrition, give nutritional supplements to
                         <span>1,500 infants</span> and introduce kitchen gardens to malnourished children’s families.
                     </p>
-                    <button>Learn more</button>
+                    <button class="programs__cards__item__button">Learn more</button>
                 </div>
-                <div class="card">
-                    <div class="image"></div>
-                    <h3 class="title">Educational Initiatives</h3>
-                    <p class="description">We believe in education as the key for <span>sustainable development</span>
+                <div class="programs__cards__item">
+                    <div class="programs__cards__item__image"></div>
+                    <h3 class="programs__cards__item__title">Educational Initiatives</h3>
+                    <p class="programs__cards__item__desc">We believe in education as the key for <span>sustainable development</span>
                         and through our 6 hamlet schools provides impoverished children with education and life skills.
                     </p>
-                    <button>Learn more</button>
+                    <button class="programs__cards__item__button">Learn more</button>
                 </div>
-                <div class="card">
-                    <div class="image"></div>
-                    <h3 class="title">Health Awareness and Outreach</h3>
-                    <p class="description">We provide comprehensive programmes to <span>12,000 families</span>, which
+                <div class="programs__cards__item">
+                    <div class="programs__cards__item__image"></div>
+                    <h3 class="programs__cards__item__title">Health Awareness and Outreach</h3>
+                    <p class="programs__cards__item__desc">We provide comprehensive programmes to <span>12,000 families</span>, which
                         includes maternal and child health, dental care, basic hygiene and sanitation, and first aid
                         training</p>
-                    <button>Learn more</button>
+                    <button class="programs__cards__item__button">Learn more</button>
                 </div>
-                <div class="card">
-                    <div class="image"></div>
-                    <h3 class="title">Water, Sanitation, Infrastructure</h3>
-                    <p class="description">We provide access to first clean water, toilets and road infrastructure to
+                <div class="programs__cards__item">
+                    <div class="programs__cards__item__image"></div>
+                    <h3 class="programs__cards__item__title">Water, Sanitation, Infrastructure</h3>
+                    <p class="programs__cards__item__desc">We provide access to first clean water, toilets and road infrastructure to
                         improve the livelihoods of the approx. <span>3,500 families </span>living in 19 remote East Bali
                         hamlets</p>
-                    <button>Learn more</button>
+                    <button class="programs__cards__item__button">Learn more</button>
                 </div>
-                <div class="card">
-                    <div class="image"></div>
-                    <h3 class="title">Sustainable Agriculture</h3>
-                    <p class="description">We teach children and their families to grow <span>organic vegetable
+                <div class="programs__cards__item">
+                    <div class="programs__cards__item__image"></div>
+                    <h3 class="programs__cards__item__title">Sustainable Agriculture</h3>
+                    <p class="programs__cards__item__desc">We teach children and their families to grow <span>organic vegetable
                             gardens</span> for a balanced diet and a sustainable, self-reliant future</p>
-                    <button>Learn more</button>
+                    <button class="programs__cards__item__button">Learn more</button>
                 </div>
-                <div class="card">
-                    <div class="image"></div>
-                    <h3 class="title">Bamboo, Environment and Economy</h3>
-                    <p class="description">We organize Vetiver grass, bamboo and agroforestry initiatives drive
+                <div class="programs__cards__item">
+                    <div class="programs__cards__item__image"></div>
+                    <h3 class="programs__cards__item__title">Bamboo, Environment and Economy</h3>
+                    <p class="programs__cards__item__desc">We organize Vetiver grass, bamboo and agroforestry initiatives drive
                         sustainable community development. Visit our social entreprise: <span>East Bali Bamboo
                             Bikes</span> !</p>
-                    <button>Learn more</button>
+                    <button class="programs__cards__item__button">Learn more</button>
                 </div>
             </div>
         </div>
@@ -156,7 +166,7 @@
             <div class="section-title">Education</div>
             <div class="education-content">
                 <h3>
-                    Education Is Essential For <br>
+                    Education Is Essential <br>For 
                     <strong> BETTER FUTURE </strong>
                 </h3>
                 <p>
@@ -234,6 +244,7 @@
 
     <section class="join section" id="join">
         <div class="container">
+            <h2 class="section-title last">Join Us</h2>
             <div class="join-title">Get involved & <br><span>Help to make a better world</span></div>
 
             <p>

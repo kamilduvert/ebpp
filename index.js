@@ -1,5 +1,5 @@
-const toggleMenu = document.querySelector('#toggle-menu');
-const navbarUl = document.querySelector('.navbar-list');
+const toggleMenu = document.querySelector('#toggle');
+const navbarUl = document.querySelector('.header__navbar__list');
 const openIcon = document.querySelector('#open-icon');
 const closeIcon = document.querySelector('#close-icon');
 
