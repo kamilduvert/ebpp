@@ -30,7 +30,7 @@
         <!----------------- Header ----------------------------->
         <header class="header">
             
-            <div class="header__container container">
+            <div class="header__container">
 
                 <!-- Clickable Logo -->
                 <a href="#home" class="header__logo__container">
@@ -79,28 +79,34 @@
             <p class="about__text">Our Mission is to eliminate poverty and promote culturally sensitive, sustainable social and economic
                 development in the impoverished rural communities of East Bali, Indonesia, prioritising the health,
                 nutrition and education of children.</p>
+            
+            <div class="about__awards">
+                <img class="about__award" src="images/award1.png" alt="logo award vetted">
+                <img class="about__award" src="images/award2.png" alt="logo award give2Asia">
+                <img class="about__award" src="images/award3.png" alt="logo award great non-profit">
+            </div>
             <span class="about__tagline">Help us to help them help themselves.</span>
             <div class="about__cards">
                 <div class="about__cards__item">
                     <i class="about__cards__item__icon fas fa-hands-helping"></i>
                     <h3 class="about__cards__item__title">Key Achievements</h3>
                     
-                    <button class="about__cards__item__cta">More</button>
+                    <button class="about__cards__item__cta">Learn more</button>
                 </div>
                 <div class="about__cards__item">
                     <i class="about__cards__item__icon fas fa-award"></i>
                     <h3 class="about__cards__item__title">Awards</h3>
-                    <button class="about__cards__item__cta">More</button>
+                    <button class="about__cards__item__cta">Learn more</button>
                 </div>
                 <div class="about__cards__item">
                     <i class="about__cards__item__icon fas fa-users"></i>
                     <h3 class="about__cards__item__title">EBPP Staff</h3>
-                    <button class="about__cards__item__cta">More</button>
+                    <button class="about__cards__item__cta">Learn more</button>
                 </div>
                 <div class="about__cards__item">
                     <i class="about__cards__item__icon fas fa-people-carry"></i>
                     <h3 class="about__cards__item__title">Funding & Sponsors</h3>
-                    <button class="about__cards__item__cta">More</button>
+                    <button class="about__cards__item__cta">Learn more</button>
                 </div>
             </div>
         </div>
@@ -176,14 +182,14 @@
                     Your donations enable East Bali Poverty Project (EBPP) to continue providing quality education in
                     2021 for all 55 students in EBPP's Jatituhu & Pengalusan schools, located in remote hamlets on the
                     steep Mounts Abang and Agung slopes in Ban village.
-                    <!-- <br> <br>Government schools are too far away and no public transport. We've already sponsored five
+                    <br> <br>Government schools are too far away and no public transport. We've already sponsored five
                     children to university and need your help to continue their education so they can graduate, realise
-                    their dreams and lead their communities to a better future. -->
+                    their dreams and lead their communities to a better future.
                 </p>
-                <button class="education__content__cta">EXPLORE PROJECT</button>
+                <button class="education__content__cta">DISCOVER THE PROJECT</button>
             </div>
         </div>
-        <video autoplay muted loop class="videoPlayer">
+        <video autoplay muted loop class="education__videoPlayer">
             <source src="video/EBPP - Education.mp4" type="video/mp4" />
             your browser does not support HTML5 video
         </video>
@@ -248,7 +254,7 @@
 
     <!----------------- Join Us ----------------------------->
     <section class="join section" id="join">
-        <div class="container">
+        <div class="join__container container">
             <h2 class="section-title last">Join Us</h2>
             <div class="join__title">Get involved & <br><span>Help to make a better world</span></div>
 
@@ -270,7 +276,11 @@
                 <p class="footer__text">
                     Help up keep in touch with news about our achievements and campaigns by signing up to our Newsletter
                 </p>
-                <input class="footer__newsletter__input" type="email" placeholder="Enter your Email address">
+                <form class="footer__newsletter__form">
+                    <input class="footer__newsletter__input" type="email" placeholder="Enter your Email address">
+                    <input class="footer__newsletter__button" type="submit" value="subscribe">
+                </form>
+                
             </div>
             <div class="footer__links">
                 <div class="footer__title">Useful Links</div>
@@ -285,7 +295,7 @@
                     </ul>
             </div>
             <div class="footer__connect">
-                <div class="footer__title">Connect <br>with Us</div>
+                <div class="footer__title">Let's connect</div>
                 <p class="footer__text">East Bali Poverty Project<br>
                     PO BOX 3850 Denpasar<br>
                     Bali – Indonesia
