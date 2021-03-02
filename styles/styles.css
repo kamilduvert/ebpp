@@ -280,14 +280,14 @@ p {
     flex-basis: 250px;
     background-color: var(--greyColor);
     padding: 15px;
-    color: #444;
+    color: var(--darkColor);
     text-align: center;
     border-radius: 15px;
     border: 1px solid  var(--greyColor);
     transition: all 0.5s;
     margin: 10px;
+    scroll-snap-align: start;
 }
-
 
 .about__cards__item__title {
     font-weight: 600;
@@ -340,18 +340,12 @@ p {
 }
 
 .programs__cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: auto;
-    width: 80%;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
 }
 
 .programs__cards__item {
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 300px;
     background-color: var(--lightColor);
     text-align: center;
     padding: 10px;
@@ -470,7 +464,6 @@ p {
 
 /* ------------ Education --------------*/
 
-
 .education__content {
     display: block;
     background-color: rgba(0,0,0,0.7);
@@ -514,7 +507,7 @@ p {
 
 /* ------------ Gallery --------------*/
 
-.gallery .gallery__content {
+.gallery__content {
     column-count: 1;
     column-gap: 20px;
 }
@@ -556,7 +549,6 @@ p {
 
 /* ------------ Join Us --------------*/
 
-
 .section-title.last::after {
     background-color: var(--primaryColor);
 }
@@ -588,7 +580,6 @@ p {
     line-height: 1.5;
     margin: 10px 10px 20px 10px;
 }
-
 
 .join__cta {
     display: inline-block;
@@ -708,7 +699,6 @@ p {
     margin: 0 10px;
 }
 
-
 /* ========================== TABLET =================================== */
 
 @media screen and (min-width: 768px) {
@@ -766,10 +756,7 @@ p {
     /* ------------ Programs --------------*/
 
     .programs__cards {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 20px;
-        width: 100%;
     }
 
     .programs__cards__item__image {
@@ -816,9 +803,8 @@ p {
 
     /* ------------ Gallery --------------*/
 
-    .gallery .gallery__content {
+    .gallery__content {
         column-count: 2;
-        column-gap: 10px;
     }
 
     /* ------------ Join Us --------------*/
@@ -835,7 +821,6 @@ p {
         margin: 0 auto;
     }
 }
-
 
 /* ========================== DESKTOP =================================== */
 
@@ -916,11 +901,9 @@ p {
     /* ------------ About --------------*/
 
 
-
     /* ------------ Programs --------------*/
 
     .programs__cards {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -935,6 +918,11 @@ p {
     }
     
     /* ------------ Gallery --------------*/
+
+    .gallery__content {
+        column-count: 4;
+
+    }
 
     /* ------------ Join Us--------------*/
 
@@ -967,10 +955,6 @@ p {
         margin: 0 auto;
     }
 
-    .about .card {
-        width: 300px;
-    }
-
     .education__content {
         width: 70%;
         margin: 30px auto;
@@ -983,10 +967,4 @@ p {
     .programs__cards {
         grid-template-columns: repeat(3, 1fr);
     }
-
-    .gallery .gallery__content {
-        column-count: 4;
-        column-gap: 50px;
-    }
-
 }
