@@ -3,6 +3,7 @@
 ## Concept
 An alternative responsive website of the NGO East Bali Poverty Project
 Original website : http://www.eastbalipovertyproject.org/
+
 My version deployed here : https://ebpp.netlify.app
 
 # Context
