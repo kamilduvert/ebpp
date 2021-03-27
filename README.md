@@ -7,7 +7,8 @@ Original website : http://www.eastbalipovertyproject.org/
 My version deployed here : https://ebpp.netlify.app
 
 # Context
-Made in 2,5 days for practice
+* Made in 2,5 days for practice
+* Wireframes disponibles [lien ici](https://whimsical.com/ebpp-Xqt8cjmcwYrKjsxFxnKew5)
 
 # Technologies
 HTML/CSS
