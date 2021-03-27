@@ -8,7 +8,8 @@ My version deployed here : https://ebpp.netlify.app
 
 # Context
 * Made in 2,5 days for practice
-* Wireframes disponibles [lien ici](https://whimsical.com/ebpp-Xqt8cjmcwYrKjsxFxnKew5)
+* * Mobile-first, BEM Methodology
+* Wireframes available [here](https://whimsical.com/ebpp-Xqt8cjmcwYrKjsxFxnKew5)
 
 # Technologies
 HTML/CSS
