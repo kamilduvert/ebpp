@@ -1,9 +1,7 @@
 # Landing Page East Bali Poverty Project
 
 ## Concept
-An alternative responsive website of the NGO East Bali Poverty Project
-Original website : http://www.eastbalipovertyproject.org/
-
+An alternative responsive website of the NGO East Bali Poverty Project.
 My version deployed here : https://ebpp.netlify.app
 
 # Context
